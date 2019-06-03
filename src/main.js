@@ -13,7 +13,9 @@ $(document).ready(function(){
     $("#score").text(flashcard.score);
     $("#result").text(random);
     $("input[type='radio']").click(function(){
+      flashcard.showNextQuestion(4,1);
     let answer = $("input:checked").val();
+
     if (flashcard.checkAnswer(random,answer))
     {
       $("#youranswer").text("correct");
@@ -22,6 +24,7 @@ $(document).ready(function(){
     {
       $("#youranswer").text("incorrect");
     }
+
 
         // $("#myanswer").text(answer);
     });

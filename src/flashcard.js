@@ -23,13 +23,21 @@ export class FlashCard{
 setTime()
 {
   setInterval(()=>{
-    if(this.time > 0)
+    if(this.time > 0 && $("input:checked").val() === undefined)
     {
 
     this.time --;
     $("#time").text(this.time);
   }
   },1000);
+}
+
+showNextQuestion(max,min)
+{
+  setTimeout(()=>{
+;
+  $("#result").text(this.getRandomQuestion(4,1));
+  },100);
 }
 
 
@@ -43,7 +51,7 @@ getRandomQuestion(max,min)
 checkAnswer(question, userAnswer)
 {
 
-  if (userAnswer === question)
+  if (userAnswer === this.dict1[question])
   {
     return true;
   }
