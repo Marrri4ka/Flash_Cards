@@ -19,10 +19,12 @@ $(document).ready(function(){
     if (flashcard.checkAnswer(random,answer))
     {
       $("#youranswer").text("correct");
+         $("#score").text(flashcard.countScore(random,answer));
     }
     else
     {
       $("#youranswer").text("incorrect");
+       $("#score").text(flashcard.countScore(random,answer));
     }
 
 

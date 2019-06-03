@@ -37,6 +37,8 @@ showNextQuestion(max,min)
   setTimeout(()=>{
 ;
   $("#result").text(this.getRandomQuestion(4,1));
+  $("input[name= 'firstQ']").prop('checked',false);
+  this.time = 31;
   },100);
 }
 
@@ -46,6 +48,18 @@ getRandomQuestion(max,min)
 
   return this.dict[Math.floor(Math.random() * (max - min)) + min];
 }
+
+countScore( question,userAnswer)
+ {
+   if(this.checkAnswer( question,userAnswer))
+   {
+     this.score += this.time;
+   }
+   else {
+     this.score -= this.time;
+   }
+   return this.score;
+ }
 
 
 checkAnswer(question, userAnswer)
