@@ -24,6 +24,11 @@ $(document).ready(function(){
 
     const getElements= function(response){
       $('#result').text('Here is question:' + response.results[0].question);
+      $('#labelA').text(response.results[0].correct_answer);
+      $('#labelB').text(response.results[0].incorrect_answers[0]);
+      $('#labelC').text(response.results[0].incorrect_answers[1]);
+      $('#labelD').text(response.results[0].incorrect_answers[2]);
+
     };
     let flashcard = new FlashCard("JS");
     var random = flashcard.getRandomQuestion(4,1);
@@ -32,7 +37,10 @@ $(document).ready(function(){
     $("#score").text(flashcard.score);
     $("#result").text(random);
     $("input[type='radio']").click(function(){
-      flashcard.showNextQuestion(4,1);
+      const getElements= function(response){
+        $('#result').text('Here is question:' + response.results[0].question);
+      };
+      // flashcard.showNextQuestion(4,1);
     let answer = $("input:checked").val();
 
     if (flashcard.checkAnswer(random,answer))

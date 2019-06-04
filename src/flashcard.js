@@ -39,7 +39,7 @@ showNextQuestion(max,min)
   $("#result").text(this.getRandomQuestion(4,1));
   $("input[name= 'firstQ']").prop('checked',false);
   this.time = 31;
-  },100);
+},1000);
 }
 
 
