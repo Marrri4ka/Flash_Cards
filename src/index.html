@@ -1,23 +1,60 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-    <img src="flashcard.jpg" width="100">
-    <button type="click" id="btn">Play</button>
+    <!-- <img src="flashcard.jpg" width="100"> -->
+
     <p>Your score is <span id="score"></span></p>
     <p>Your time is <span id="time"></span></p>
-    <p>Your question is <span id="result"></span></p>
 
 
 
     <span id="myanswer">Your answer is </span> <span id="youranswer"></span><br>
 
-    <input type="radio" name ="firstQ" value="a"><span id="labelA"></span>
-    <input type="radio" name = "firstQ" value="b"><span id="labelB"></span>
-    <input type="radio" name ="firstQ" value="c"><span id="labelC"></span>
+
+
+  <div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab"></label>
+		<input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab"></label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+				<div class="group">
+					<label for="user" class="label">Question</label>
+          <p> <span id="result"></span></p>
+
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Choose answer</label>
+          <input type="radio" name ="firstQ" value="a"><span id="labelA"></span>
+          <input type="radio" name = "firstQ" value="b"><span id="labelB"></span>
+          <input type="radio" name ="firstQ" value="c"><span id="labelC"></span>
+
+				</div>
+				<div class="group">
+					<input type="click" id="btn" class="button" value="Play">
+				</div>
+				<div class="hr"></div>
+			</div>
+			<div class="for-pwd-htm">
+				<div class="group">
+					<label for="user" class="label">Username or Email</label>
+					<input id="user" type="text" class="input">
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Reset Password">
+				</div>
+				<div class="hr"></div>
+			</div>
+		</div>
+	</div>
+</div>
 
   </body>
 </html>
